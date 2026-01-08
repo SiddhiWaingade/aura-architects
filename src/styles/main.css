@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-btn {
+  border-bottom: 2px solid gold;
+}
+
+
+/* =================================
+   PREMIUM NAVBAR + LOGO (QUIET LUXURY)
+================================= */
+
+.premium-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== PREMIUM LOGO ===== */
+.logo-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.logo-wordmark span {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links li {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #111;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Minimal underline */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #111;
+  transition: width 0.35s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* Active state */
+.nav-links .active {
+  opacity: 0.6;
+}
+
+/* CTA Button */
+.nav-cta {
+  padding: 10px 26px;
+  border: 1px solid #111;
+  transition: all 0.35s ease;
+}
+
+.nav-cta:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ===== MOBILE (FUTURE READY) ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 18px 30px;
+  }
+}
+
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 120px;
+  left: 80px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: gold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  padding: 120px 80px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* =================================
+   PREMIUM ABOUT – ARCHITECT STUDIO
+================================= */
+
+.premium-about {
+  background: #fafafa;
+}
+
+.about-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* Left */
+.about-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.about-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+/* Right */
+.about-content {
+  max-width: 520px;
+}
+
+.about-lead {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+/* Metrics */
+.about-metrics {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.metric h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+.metric span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-intro h2 {
+    font-size: 38px;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.project-card {
+  height: 260px;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.service-grid div {
+  padding: 40px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+/* =========================
+   ADVANCED SERVICES SECTION
+========================= */
+
+.services {
+  background: #111;
+  color: #fff;
+}
+
+.services-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.services-header {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+.services-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: gold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.services-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.services-header p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* Service Cards */
+.services .service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 40px;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bbb;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-header h2 {
+    font-size: 34px;
+  }
+}
+
+
+/* FOOTER */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===========================
+   PROJECTS IMAGE OVERLAY FIX
+   (SAFE – SCOPED ONLY TO .projects)
+=========================== */
+
+.projects .project-card {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  padding: 0;
+}
+
+.projects .project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay text */
+.projects .overlay-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover effect */
+.projects .project-card:hover img {
+  transform: scale(1.1);
+}
+
+.projects .project-card:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Mobile height fix */
+@media (max-width: 768px) {
+  .projects .project-card {
+    height: 220px;
+  }
+}
+/* =================================
+   ADVANCED PROJECTS PAGE – UNIQUE
+================================= */
+
+.advanced-projects {
+  padding-top: 180px;
+}
+
+/* INTRO */
+.projects-intro {
+  max-width: 760px;
+  margin-bottom: 140px;
+}
+
+.projects-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 68px;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.projects-intro p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* FEATURED PROJECT */
+.featured-project {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+.featured-project img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.featured-content {
+  max-width: 420px;
+}
+
+.project-category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.featured-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.featured-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.project-meta {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* COLLECTION */
+.projects-collection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.project-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.project-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-text span {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-project {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .featured-project img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-intro h1 {
+    font-size: 44px;
+  }
+
+  .projects-collection {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .project-item img {
+    height: 260px;
+  }
+}
+
+/* =========================
+   PREMIUM CONTACT PAGE
+========================= */
+
+.contact-page {
+  padding-top: 180px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+/* Left */
+.contact-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.contact-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  margin: 20px 0;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555;
+  max-width: 420px;
+}
+
+.contact-details p {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 6px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 30px;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-info h1 {
+    font-size: 40px;
+  }
+}
+/* =========================
+   STUDIO PAGE – PREMIUM
+========================= */
+
+.studio-page {
+  padding-top: 180px;
+}
+
+/* Intro */
+.studio-intro {
+  max-width: 760px;
+  margin-bottom: 140px;
+}
+
+.studio-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.studio-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.studio-intro p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* Sections */
+.studio-section {
+  max-width: 900px;
+  margin-bottom: 120px;
+}
+
+.studio-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.studio-section p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* Process */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.process-step h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Values */
+.studio-values {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.studio-values li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* CTA */
+.studio-cta {
+  max-width: 720px;
+  margin-top: 160px;
+}
+
+.studio-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.studio-cta p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.studio-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 1px solid #111;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.studio-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .studio-intro h1 {
+    font-size: 42px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-values {
+    grid-template-columns: 1fr;
+  }
+}
